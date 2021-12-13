@@ -20,4 +20,4 @@
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
 
 node_modules
-image_generation\output
+image_generation/output
