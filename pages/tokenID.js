@@ -1,6 +1,6 @@
 const [myTokenID, setMyTokenID] = useState([])
 
-var array = [];
+var nftArray = [];
 
 
 // in callContractData
@@ -20,10 +20,10 @@ async  function getNFTS(wallet,contract, balance){
 
     if (contract != null) {
         for (i = 0; i < balance; i++) {
-            await contract.methods.tokenOfOwnerByIndex(wallet, i).call({from:wallet}).then((id) => { array.push(id) });
+            await contract.methods.tokenOfOwnerByIndex(wallet, i).call({from:wallet}).then((id) => { nftArray.push(id) });
         }
-        console.log(array)
-        setMyTokenID(array)
+        console.log(nftArray)
+        setMyTokenID(nftArray)
     }
 }
 

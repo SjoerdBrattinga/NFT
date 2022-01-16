@@ -22,7 +22,9 @@ font-display: swap;
 
 
 #bodyy {
-    background-color: #556B30;
+    /* background-color: #e2e4e0; */
+    /* background-color: #707c73; */
+    background-color: #40531B;
     background-position: 0px 0px;
     background-size: contain;
     background-repeat: repeat;
@@ -41,9 +43,10 @@ font-display: swap;
 }
 
 .text-blau {
-    color: orange;
+    color: #E6F14A;
 }
 
 .bg-blau {
-    background-color: orange;
+    background-color: #595F72;
 }
+
