@@ -199,9 +199,8 @@ export default function Mint() {
             <a href="/#traits" className="text-4xl text-white hover:text-black m-6">Traits</a>
             <a href="/#roadmap" className="text-4xl text-white hover:text-black m-6">Roadmap</a>
             <a href="/#team" className="text-4xl text-white hover:text-black m-6">Team</a>
-            <a href="/#contact" className="text-4xl text-white hover:text-black m-6">Contact</a>
-            <a href="https://twitter.com/matsiemaalNFT" className="text-4xl  hover:text-white m-6 text-blau">TWITTER</a>
-            <a href="https://discord.gg/PHBw4VUMVX" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>
+            <a href="/#contact" className="text-4xl text-white hover:text-black m-6">Contact</a>          
+            <a href="https://discord.gg/v2zXsSwBUg" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>
           </nav>
 
           </div>

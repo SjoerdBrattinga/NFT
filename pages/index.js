@@ -35,7 +35,7 @@ export default function Home() {
             <a href="#team" className="text-4xl text-white hover:text-black m-6">Team</a>
             <a href="#contact" className="text-4xl text-white hover:text-black m-6">Contact</a>
             {/* <a href="https://twitter.com/matsiemaalNFT" className="text-4xl  hover:text-white m-6 text-blau">TWITTER</a> */}
-            <a href="https://discord.gg/PHBw4VUMVX" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>
+            <a href="https://discord.gg/v2zXsSwBUg" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>
           </nav>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="gallery" className="   mx-6 py-6">
+      {/* <div id="gallery" className="   mx-6 py-6">
         <h2 className="text-blau Poppitandfinchsans text-7xl text-center"> VARIETIES</h2>
         <div class="container mx-auto">
           <div class="grid-cols-3 p-20 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
           </div>
         </div>                 
-      </div>                
+      </div>                 */}
 
       <div id="roadmap" className="">
         <h2 className="text-7xl text-center Poppitandfinchsans text-blau my-4">OUR MISSION STATEMENT</h2>
