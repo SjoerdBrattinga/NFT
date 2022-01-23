@@ -108,31 +108,6 @@ export default function Mint() {
     }
   }
 
-  async function mint(how_many_nfts) {
-    if (nftContract) {
-
-      const price = Number(nftPrice) * how_many_nfts
-
-      const gasAmount = await nftContract.methods.mint(how_many_nfts).estimateGas({ from: walletAddress, value: price })
-      console.log("estimated gas", gasAmount)
-
-      console.log({ from: walletAddress, value: price })
-
-      nftContract.methods
-        .mint(how_many_nfts)
-        .send({ from: walletAddress, value: price, gas: String(gasAmount) })
-        .on('receipt', function (hash) {
-          console.log(hash)
-        })
-
-    } else {
-      console.log("Wallet not connected")
-    }
-
-  };
-
-
-
   return (
     <div id="bodyy" className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
@@ -145,13 +120,6 @@ export default function Mint() {
         <meta property="og:url" content="https://Matsiemaal.nl/" key="ogurl" />
         <meta property="og:image" content="https://Matsiemaal.nl/images/pumps.gif" key="ogimage" />
         <meta property="og:site_name" content="https://Matsiemaal.nl/" key="ogsitename" />
-
-        <meta name="twitter:card" content="summary_large_image" key="twcard" />
-        <meta property="twitter:domain" content="Matsiemaal.nl" key="twdomain" />
-        <meta property="twitter:url" content="https://Matsiemaal.nl/" key="twurl" />
-        <meta name="twitter:title" content="Matsiemaal" key="twtitle" />
-        <meta name="twitter:description" content="Get ready for NFTs with Matsiemaal! " key="twdesc" />
-        <meta name="twitter:image" content="https://Matsiemaal.nl/images/pumps.gif" key="twimage" />
       </Head>
 
 
@@ -161,12 +129,8 @@ export default function Mint() {
           <nav className="flex flex-wrap flex-row justify-around Poppitandfinchsans">
             <a href="/#about" className="text-4xl text-white hover:text-black m-6">About</a>
             <a href="/mint" className="text-4xl text-white hover:text-black m-6">MINT!</a>
-            <a href="/beheer" className="text-4xl text-white hover:text-black m-6">Beheer</a>
-            <a href="/#traits" className="text-4xl text-white hover:text-black m-6">Traits</a>
-            <a href="/#roadmap" className="text-4xl text-white hover:text-black m-6">Roadmap</a>
-            <a href="/#team" className="text-4xl text-white hover:text-black m-6">Team</a>
-            <a href="/#contact" className="text-4xl text-white hover:text-black m-6">Contact</a>
-            
+            <a href="/token" className="text-4xl text-white hover:text-black m-6">My NFTs</a>
+            <a href="/beheer" className="text-4xl text-white hover:text-black m-6">Beheer</a>           
             <a href="https://discord.gg/v2zXsSwBUg" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>
           </nav>
 
@@ -183,48 +147,22 @@ export default function Mint() {
 
         <div className="mt-6 border-b-2 py-6">
 
-          <div className="flex flex-col items-center">
-
-            <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none my-4 ">TOTAL MATSIES MINTED:  <span className="text-blau text-6xl"> {!signedIn ? <>-</> : <>{totalSupply}</>} / 9999</span></span>
-
-            <div id="mint" className="flex justify-around  mt-8 mx-6">
-              <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none px-3 font-bold">Mint</span>
-
-              <input
-                type="number"
-                min="1"
-                max="15"
-                value={how_many_nfts}
-                onChange={e => set_how_many_nfts(e.target.value)}
-                name=""
-                className="Poppitandfinchsans pl-4 text-4xl  inline bg-grey-lighter  py-2 font-normal rounded text-grey-darkest  font-bold"
-              />
-
-              <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none px-3 font-bold">NFTS!</span>
-
-            </div>
+          <div className="flex flex-col items-center">         
 
             {tokens > 0 ?
               <>
-              {myTokenID.map(function (d, idx) {
-                
-                 var src = `https://gateway.pinata.cloud/ipfs/QmZVj9iD7sAGYqghuGLPqLqTXRiAMmgqGcH8aDqCWncXPm/${idx}.png`;
-                // var img = new Image();
-                // img.src = src;
-                // img.alt = idx;
-                // document.getElementById('token').appendChild(img);
+              {myTokenID.map(function (d, idx) {                
+                var src = `https://gateway.pinata.cloud/ipfs/QmZVj9iD7sAGYqghuGLPqLqTXRiAMmgqGcH8aDqCWncXPm/${idx}.png`;            
                 return (
-                  <div>
-                    <h2>Remote Image</h2>
+                  <div key={d}>
+                    <h2>Token Id: {idx}</h2>
                     <Image
                       src={src}
                       alt={idx}
                       width='600'
                       height='600'
                     />
-                  </div>
-                  // <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none my-4 ">
-                  //   </span>
+                  </div>                  
                 )
               })}
             </>

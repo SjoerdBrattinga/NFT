@@ -142,28 +142,28 @@ export default function Mint() {
     
     };
 
-  async function mint(how_many_nfts) {
-    if (nftContract) {
+  // async function mint(how_many_nfts) {
+  //   if (nftContract) {
 
-      const price = Number(nftPrice)  * how_many_nfts
+  //     const price = Number(nftPrice)  * how_many_nfts
 
-      const gasAmount = await nftContract.methods.mint(how_many_nfts).estimateGas({from: walletAddress, value: price})
-      console.log("estimated gas",gasAmount)
+  //     const gasAmount = await nftContract.methods.mint(how_many_nfts).estimateGas({from: walletAddress, value: price})
+  //     console.log("estimated gas",gasAmount)
 
-      console.log({from: walletAddress, value: price})
+  //     console.log({from: walletAddress, value: price})
 
-      nftContract.methods
-            .mint(how_many_nfts)
-            .send({from: walletAddress, value: price, gas: String(gasAmount)})
-            .on('receipt', function(hash){
-              console.log(hash)
-            })
+  //     nftContract.methods
+  //           .mint(how_many_nfts)
+  //           .send({from: walletAddress, value: price, gas: String(gasAmount)})
+  //           .on('receipt', function(hash){
+  //             console.log(hash)
+  //           })
 
-    } else {
-        console.log("Wallet not connected")
-    }
+  //   } else {
+  //       console.log("Wallet not connected")
+  //   }
 
-  };
+  // };
 
 
 
@@ -195,11 +195,8 @@ export default function Mint() {
           <nav className="flex flex-wrap flex-row justify-around Poppitandfinchsans">
             <a href="/#about" className="text-4xl text-white hover:text-black m-6">About</a>
             <a href="/mint" className="text-4xl text-white hover:text-black m-6">MINT!</a>
-            <a href="/beheer" className="text-4xl text-white hover:text-black m-6">Beheer</a>
-            <a href="/#traits" className="text-4xl text-white hover:text-black m-6">Traits</a>
-            <a href="/#roadmap" className="text-4xl text-white hover:text-black m-6">Roadmap</a>
-            <a href="/#team" className="text-4xl text-white hover:text-black m-6">Team</a>
-            <a href="/#contact" className="text-4xl text-white hover:text-black m-6">Contact</a>          
+            <a href="/token" className="text-4xl text-white hover:text-black m-6">My NFTs</a>
+            <a href="/beheer" className="text-4xl text-white hover:text-black m-6">Beheer</a>           
             <a href="https://discord.gg/v2zXsSwBUg" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>
           </nav>
 
@@ -218,24 +215,7 @@ export default function Mint() {
 
             <div className="flex flex-col items-center">
 
-                <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none my-4 ">TOTAL MATSIES MINTED:  <span className="text-blau text-6xl"> {!signedIn ?  <>-</>  :  <>{totalSupply}</> } / 9999</span></span>
-
-                <div id="mint" className="flex justify-around  mt-8 mx-6">
-                  <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none px-3 font-bold">Mint</span>
-
-                  <input
-                                      type="number"
-                                      min="1"
-                                      max="15"
-                                      value={how_many_nfts}
-                                      onChange={ e => set_how_many_nfts(e.target.value) }
-                                      name=""
-                                      className="Poppitandfinchsans pl-4 text-4xl  inline bg-grey-lighter  py-2 font-normal rounded text-grey-darkest  font-bold"
-                                  />
-
-                  <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none px-3 font-bold">NFTS!</span>
-
-                </div>
+             
                 { 
                     owner   ?   <button onClick={() => flipSaleState()} className="mt-4 Poppitandfinchsans text-4xl border-6 bg-blau  text-white hover:text-black p-2 ">FlipSaleState: {saleStarted ? "active" : "not active"}</button> 
                             :   <h1>GEEN EIGENAAR</h1>
@@ -245,7 +225,7 @@ export default function Mint() {
                             :   <h1>GEEN EIGENAAR</h1>
                 }                
                 { 
-                    owner   ?   <button onClick={() => reserveTokens()} className="mt-4 Poppitandfinchsans text-4xl border-6 bg-blau  text-white hover:text-black p-2 ">Reserve Tokens</button> 
+                    owner   ?   <button onClick={() => reserveTokens()} className="mt-4 Poppitandfinchsans text-4xl border-6 bg-blau  text-white hover:text-black p-2 ">Reserve 30 Tokens</button> 
                             :   <h1>GEEN EIGENAAR</h1>
                 }
                 <br/> 

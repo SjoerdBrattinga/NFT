@@ -117,13 +117,6 @@ export default function Mint() {
         <meta property="og:url" content="https://Matsiemaal.nl/" key="ogurl" />
         <meta property="og:image" content="https://Matsiemaal.nl/images/pumps.gif" key="ogimage" />
         <meta property="og:site_name" content="https://Matsiemaal.nl/" key="ogsitename" />
-
-        <meta name="twitter:card" content="summary_large_image" key="twcard" />
-        <meta property="twitter:domain" content="Matsiemaal.nl" key="twdomain" />
-        <meta property="twitter:url" content="https://Matsiemaal.nl/" key="twurl" />
-        <meta name="twitter:title" content="Matsiemaal" key="twtitle" />
-        <meta name="twitter:description" content="Get ready for NFTs with Matsiemaal! " key="twdesc" />
-        <meta name="twitter:image" content="https://Matsiemaal.nl/images/pumps.gif" key="twimage" />
       </Head>
 
 
@@ -131,15 +124,11 @@ export default function Mint() {
         <div className="flex items-center justify-between w-full border-b-2	pb-6">
           <a href="/" className=""><img src="images/logo.png" width="108" alt="" className="logo-image" /></a>
           <nav className="flex flex-wrap flex-row justify-around Poppitandfinchsans">
-            <a href="/#about" className="text-4xl text-white hover:text-black m-6">About</a>
+          <a href="/#about" className="text-4xl text-white hover:text-black m-6">About</a>
             <a href="/mint" className="text-4xl text-white hover:text-black m-6">MINT!</a>
-            <a href="/token" className="text-4xl text-white hover:text-black m-6">Token!</a>
-            <a href="/#traits" className="text-4xl text-white hover:text-black m-6">Traits</a>
-            <a href="/#roadmap" className="text-4xl text-white hover:text-black m-6">Roadmap</a>
-            <a href="/#team" className="text-4xl text-white hover:text-black m-6">Team</a>
-            <a href="/#contact" className="text-4xl text-white hover:text-black m-6">Contact</a>
-            {/* <a href="https://twitter.com/matsiemaalNFT" className="text-4xl  hover:text-white m-6 text-blau">TWITTER</a> */}
-            <a href="https://discord.gg/v2zXsSwBUg" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>
+            <a href="/token" className="text-4xl text-white hover:text-black m-6">My NFTs</a>
+            <a href="/beheer" className="text-4xl text-white hover:text-black m-6">Beheer</a>           
+            <a href="https://discord.gg/v2zXsSwBUg" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>            
           </nav>
 
         </div>

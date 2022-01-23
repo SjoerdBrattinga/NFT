@@ -18,7 +18,8 @@
 !.vscode/*.code-snippets
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
-.next
+
 node_modules
 image_generation/output
 
+.next/

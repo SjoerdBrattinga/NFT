@@ -28,13 +28,10 @@ export default function Home() {
         <div className="flex items-center justify-between w-full border-b-2	pb-6">
           <a href="/" className=""><img src="images/logo.png" width="108" alt="" className="logo-image" /></a>
           <nav className="flex flex-wrap flex-row justify-around Poppitandfinchsans">
-            <a href="#about" className="text-4xl text-white hover:text-black m-6">About</a>
+          <a href="/#about" className="text-4xl text-white hover:text-black m-6">About</a>
             <a href="/mint" className="text-4xl text-white hover:text-black m-6">MINT!</a>
-            <a href="#traits" className="text-4xl text-white hover:text-black m-6">Traits</a>
-            <a href="#roadmap" className="text-4xl text-white hover:text-black m-6">Roadmap</a>
-            <a href="#team" className="text-4xl text-white hover:text-black m-6">Team</a>
-            <a href="#contact" className="text-4xl text-white hover:text-black m-6">Contact</a>
-            {/* <a href="https://twitter.com/matsiemaalNFT" className="text-4xl  hover:text-white m-6 text-blau">TWITTER</a> */}
+            <a href="/token" className="text-4xl text-white hover:text-black m-6">My NFTs</a>
+            <a href="/beheer" className="text-4xl text-white hover:text-black m-6">Beheer</a>           
             <a href="https://discord.gg/v2zXsSwBUg" className="text-4xl  hover:text-white m-6 text-blau">DISCORD</a>
           </nav>
         </div>
@@ -44,7 +41,8 @@ export default function Home() {
         <div className="mt-6 border-b-2 py-6">
           <div className="flex flex-wrap lg:flex-nowrap justify-around items-center">
             <div className="lg:w-1/2 w-3/4">
-              <h1 className="text-7xl Poppitandfinchsans text-white ">Get ready for NFTs with<br/><span className="text-blau">Matsiemaal!</span></h1>
+              <h1 className="text-7xl Poppitandfinchsans text-white ">Get ready for NFTs<br/>          
+              </h1>
               <p className="text-2xl text-white my-6  montserrat">
               <strong>LAUNCH DATE:</strong> 1 Januari 2022. 2pm EST. <br />‍
               <span className="text-white text-2xl montserrat"><strong>TOTAL SUPPLY: 9999</strong> Matsies.<br/><strong>PRICE: 0.01 ETH </strong>each.</span></p>
@@ -56,18 +54,9 @@ export default function Home() {
             <a href="/mint" className="mt-4 Poppitandfinchsans text-4xl border-6 bg-blau  text-white hover:text-black p-2 ">GO TO MINTING PAGE!</a>
           </div>
         </div>
-      </div>
+      </div>    
 
-      <div id="traits" className="flex flex-wrap justify-around items-center  mx-6 py-6">
-        <div className="border-4 border-blue-300 p-4">
-          <img src="images/earth.gif" alt="" width="400px" className="feature-image"/></div>
-        <div className="flex flex-col justify-between mx-6 sm:w-1/2 w-4/5 py-6 ">
-          <h2 className="text-blau Poppitandfinchsans text-6xl text-center">TRAITS</h2>
-          <p className="text-xl text-white my-6  montserrat">Lorem ipsum dolor sit amet.</p>
-        </div>
-      </div>
-
-      {/* <div id="gallery" className="   mx-6 py-6">
+      <div id="gallery" className="   mx-6 py-6">
         <h2 className="text-blau Poppitandfinchsans text-7xl text-center"> VARIETIES</h2>
         <div class="container mx-auto">
           <div class="grid-cols-3 p-20 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
@@ -91,44 +80,7 @@ export default function Home() {
             </div>
           </div>
         </div>                 
-      </div>                 */}
-
-      <div id="roadmap" className="">
-        <h2 className="text-7xl text-center Poppitandfinchsans text-blau my-4">OUR MISSION STATEMENT</h2>
-        <p className="text-xl text-white text-center my-6  montserrat"> We want to change the world!</p>
-        <h2 className="text-7xl text-center Poppitandfinchsans text-blau my-4">HOW WE'RE GIVING BACK</h2>
-        <p className="text-xl text-white text-center my-6 my-6  montserrat"> 10% </p>
-        <p className="text-xl text-white text-center my-6 my-6  montserrat"> 25% </p>
-        <p className="text-xl text-white text-center my-6 my-6  montserrat"> 50% </p>
-        <p className="text-xl text-white text-center my-6 my-6  montserrat"> 75% </p>
-        <p className="text-xl text-white text-center my-6 my-6  montserrat"> 100% </p>
-      </div>
-
-      <div id="team" className="mx-12 my-16 ">
-        <h2 className="text-7xl text-center Poppitandfinchsans text-blau my-4">RESEARCH TEAM</h2>
-        <div className="flex justify-around flex-wrap">
-          <div className="flex flex-col  my-6" style={{width:"360px"}}>
-            <div className="cards-image-mask"><img src="/images/Mats.jpg" width="360px" alt="" className="cards-image" /></div>
-            <h3 className="my-4 text-center text-5xl text-center Poppitandfinchsans text-blau">Mats</h3>
-            <a href="https://twitter.com/matsiemaalNFT" className="text-center text-4xl text-center Poppitandfinchsans underline text-white"> (@matsiemaalNFT)</a>
-          </div>
-        </div>
-      </div>
-        
-      <div id="contact" className="flex flex-wrap justify-around items-center  mx-6 py-6">
-        <div className=" p-4">
-          <img src="images/contact.png" alt="" width="400px" className="feature-image"/>
-        </div>
-        <div className="flex flex-col justify-between mx-6 sm:w-1/2 w-4/5 py-6 ">
-          <h2 className="text-blau Poppitandfinchsans text-6xl text-center">CONTACT</h2>
-          <p className="text-xl text-white my-6  montserrat"> We'd love to hear from you!</p>
-          <p className="text-xl text-white my-6  montserrat"> Drop us a line at <a className="text-orange underline font-bold" target="_blank" href="mailto:info@matsiemaal.nl">info@Matsiemaal.nl</a>,<br/>
-          or alternatively reach out to us on Twitter <a className="text-orange underline font-bold" target="_blank" href="https://twitter.com/MatsiemaalNFT">@matsiemaalNFT</a><br/>
-          Or alternatively, join our <a className="text-orange underline font-bold" target="_blank" href="https://discord.gg/8Wk9Hp6UyV">Discord Server</a>.
-          </p>
-        </div>
-      </div>     
-
+      </div>   
     </div>
     )
   }
