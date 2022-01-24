@@ -1338,7 +1338,7 @@ abstract contract ERC721Enumerable is ERC721, IERC721Enumerable {
 pragma solidity ^0.8.0;
 
 
-contract matsiemaalNFT is ERC721Enumerable, Ownable{
+contract sjoerdNFT is ERC721Enumerable, Ownable{
     using SafeMath for uint256;
     using Address for address;
     using Strings for uint256;
