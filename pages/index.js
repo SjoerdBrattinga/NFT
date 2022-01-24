@@ -25,8 +25,7 @@ export default function Home() {
       </Head>
 
       <div className="">
-        <div className="flex items-center justify-between w-full border-b-2	pb-6">
-          <a href="/" className=""><img src="images/logo.png" width="108" alt="" className="logo-image" /></a>
+        <div className="flex items-center justify-between w-full border-b-2	pb-6">          
           <nav className="flex flex-wrap flex-row justify-around Poppitandfinchsans">
           <a href="/#about" className="text-4xl text-white hover:text-black m-6">About</a>
             <a href="/mint" className="text-4xl text-white hover:text-black m-6">MINT!</a>
@@ -56,7 +55,7 @@ export default function Home() {
         </div>
       </div>    
 
-      <div id="gallery" className="   mx-6 py-6">
+      {/* <div id="gallery" className="   mx-6 py-6">
         <h2 className="text-blau Poppitandfinchsans text-7xl text-center"> VARIETIES</h2>
         <div class="container mx-auto">
           <div class="grid-cols-3 p-20 space-y-2 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
@@ -80,7 +79,7 @@ export default function Home() {
             </div>
           </div>
         </div>                 
-      </div>   
+      </div>    */}
     </div>
     )
   }
